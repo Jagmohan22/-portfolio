@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #2E2E2E, hsl(0, 0%, 11%)); /* Dark gray to black */
+  color: #FFFFFF; /* White text for contrast */
+}
+
+/* About Container */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* About Me Section */
+.fade-in-section {
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #FFFFFF; /* White background */
+  color: #222222; /* Dark Gray text for visibility */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: left;
+  border-left: 5px solid #1C1C1C; /* Black left border */
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInSlide 1.5s ease-out forwards;
+}
+
+/* Smooth Fade-in & Slide Animation */
+@keyframes fadeInSlide {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* "About Me" Heading */
+.fade-in-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #1C1C1C; /* **FIXED: Solid black text for visibility** */
+  border-bottom: 2px solid #1C1C1C; /* Thin black underline */
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* About Me Paragraphs */
+.fade-in-section p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333333; /* **Dark Gray for better contrast** */
+}
+
+/* Left Side - Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Increased spacing between boxes */
+}
+
+/* Individual Image Box */
+.image-box {
+  width: 240px; /* Adjusted width */
+  height: 260px; /* Adjusted height */
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, background 0.5s;
+}
+
+/* Dynamic Background Colors */
+.image-box:nth-child(1) { background-color: #FF6B6B; }
+.image-box:nth-child(2) { background-color: #4ECDC4; }
+.image-box:nth-child(3) { background-color: #FFD166; }
+.image-box:nth-child(4) { background-color: #1A535C; }
+.image-box:nth-child(5) { background-color: #FF9F1C; }
+.image-box:nth-child(6) { background-color: #6A0572; }
+
+/* Hover Effect for Image Titles */
+.image-box::after {
+  content: attr(data-title);
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.image-box:hover::after {
+  bottom: 0;
+}
+
+.image-box:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .fade-in-section {
+      width: 90%;
+      text-align: center;
+      padding: 15px;
+  }
+
+  .image-grid {
+      order: 1;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+
+  .image-box {
+      width: 200px;
+      height: 240px;
+  }
+}

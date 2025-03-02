@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/project.css">
+    <link rel="stylesheet" href="../style/contact.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Jagmohan</div>
+        <div class="menu-toggle">&#9776;</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-overlay">
+          <div class="hero-content">
+              <h1 class="hello-text">HELLO FOLKS!</h1>
+              <h2>My name is Jagmohan Negi. I am a Programmer from India.</h2>
+          </div>
+      </div>
+  </section>
+  
+
+ 
+<!-- About Me -->
+
+<div class="about-container">
+    <!-- Left Side - Image Grid -->
+    <div class="image-grid">
+        <div class="image-box" data-title="Friends"></div>
+        <div class="image-box" data-title="Family"></div>
+        <div class="image-box" data-title="Coding Time"></div>
+        <div class="image-box" data-title="Projects"></div>
+        <div class="image-box" data-title="Hobbies"></div>
+        <div class="image-box" data-title="College Life"></div>
+    </div>
+
+    <!-- Right Side - About Me Section -->
+    <section id="about" class="fade-in-section">
+        <h2 id="aboutme">About Me</h2>
+        <p>
+            I am a passionate Computer Science student currently pursuing my BCA at UPES Dehradun. With a strong interest in web development, machine learning, and problem-solving, I continuously explore new technologies to enhance my skills.
+        </p>
+        <p>
+            Alongside my studies, I work as a freelance developer, helping clients build responsive websites, web applications, and innovative solutions. Whether it's frontend design, backend development, or full-stack projects, I strive to deliver high-quality results.
+
+            
+        </p>
+        <p>
+            <b> I am always open to collaborations and freelance projects, so feel free to reach out!"</b>
+        </p>
+        <div class="resume-button-container">
+            <a href="../resume.pdf" download="Jagmohan_Resume.pdf">
+                <button class="resume-btn">Download Resume</button>
+            </a>
+        </div>
+    </section>
+</div>
+
+<section class="projects-section">
+    <h2 class="section-title">Projects</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="webdev">Web Dev</button>
+        <button class="filter-btn" data-category="ml">ML</button>
+        <button class="filter-btn" data-category="webdesign">Web Designing</button>
+    </div>
+
+    <!-- Project Boxes -->
+    <div class="projects-container">
+        <div class="project-card webdev">
+            <div class="project-box"></div>
+            <p class="project-title">Web Dev Project 1</p>
+        </div>
+        <div class="project-card webdev">
+            <div class="project-box"></div>
+            <p class="project-title">Web Dev Project 2</p>
+        </div>
+        <div class="project-card webdev">
+            <div class="project-box"></div>
+            <p class="project-title">Web Dev Project 3</p>
+        </div>
+
+        <div class="project-card ml">
+            <div class="project-box"></div>
+            <p class="project-title">ML Project 1</p>
+        </div>
+        <div class="project-card ml">
+            <div class="project-box"></div>
+            <p class="project-title">ML Project 2</p>
+        </div>
+
+        <div class="project-card webdesign">
+            <div class="project-box"></div>
+            <p class="project-title">Web Design Project</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <h1 class="title">Contact Me</h1>
+    <a href="mailto:hello@1234" class="email">hello@1234</a>
+    <p class="subtitle">Feel free to <span class="highlight">contact me</span> for any <strong class="freelance-text">freelancing projects!</strong></p>
+
+    <form class="contact-form">
+        <div class="input-group">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Address" required>
+        </div>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+    <div class="social-icons">
+        <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+    </div>
+</section>
+
+
+
+
+  
+<script defer src="../script/project.js"></script>
+<script src="../script/script.js"></script>
+<script src="../script/contact.js"></script>
+</body>
+</html>
