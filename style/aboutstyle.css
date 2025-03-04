@@ -114,15 +114,21 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  
   .about-container {
       flex-direction: column;
       align-items: center;
+      padding: 5px; /* Reduced padding */
+      margin: 5px; /* Reduced margin */
+      
   }
 
   .fade-in-section {
       width: 90%;
       text-align: center;
       padding: 15px;
+      font-size: 14px;
+      
   }
 
   .image-grid {
@@ -137,4 +143,7 @@ body {
       width: 200px;
       height: 240px;
   }
+  
 }
+
+

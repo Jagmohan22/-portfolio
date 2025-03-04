@@ -1,5 +1,5 @@
 
-
+//responsive nav
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -8,3 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
         navLinks.classList.toggle("show"); // Show/hide menu
     });
 });
+
+
+
+
+  
